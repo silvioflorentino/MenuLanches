@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Lanches</title>
+</head>
+<body>
+    <h1>Descrião do Lanche escolhido.</h1>
+    <p id="lanche"></p>
+    <p id="desc"></p>
+    <script>
+        let escolha = Number(prompt("Qual lanche vc deseja saber a descrição?\n1-X-Burguer\n2-X-Salada\n3-Lanchinho"));
+        let descricao;
+        let lanche;
+
+        switch (escolha) {
+            case 1:
+                descricao = "Descrição: hamburguer, alface e tomate";
+                lanche = "X-Burguer";
+                break;
+            case 2:
+                descricao = "Descrição: bife de franco, cebola e molho especial";
+                lanche = "X-Salada";
+                break;
+            case 3:
+                descricao = "Descrição: pão integral, queijo prato e alface americano";
+                lanche = "Lanchinho";
+                break;
+            default:
+                lanche = "Opção Invalida;"
+                descricao = "Opção invalida."
+                break;
+        }
+
+        document.getElementById("lanche").innerHTML = descricao;
+        document.getElementById("desc").innerHTML = lanche;
+    </script>
+</body>
+</html>
